@@ -27,7 +27,7 @@ SELECT COUNT(DISTINCT(inventory_id)) FROM sakila.rental;	-- 4580 movies have bee
 SELECT COUNT(DISTINCT(last_name)) FROM sakila.actor;		-- 121 distinct last names
 
 -- Question 6
-SELECT * FROM sakila.film
+SELECT title FROM sakila.film
 ORDER BY length DESC
 LIMIT 10;
 
@@ -37,7 +37,7 @@ WHERE first_name = "SCARLETT";
 
 -- Bonus 1
 SELECT * FROM sakila.film
-WHERE title LIKE "%ARMAGEDDON%";
+WHERE title LIKE "%ARMAGEDDON%" AND length > 100;
 
 -- Bonus 2
 SELECT COUNT(*) FROM sakila.film
